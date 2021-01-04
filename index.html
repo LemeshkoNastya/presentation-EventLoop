@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>Event Loop</title>
 
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
@@ -16,8 +16,47 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<section data-background-color="#1D766F"><h1>Event Loop</h1></section>
+				<section data-background-color="#5DCEC6" style="font-size: 60px;">
+					<section>What exactly will be discussed?</section>
+					<section>
+						<ul>
+							<li>Problem and solution in NodeJS</li>
+							<li>Definition</li>
+							<li>Representation</li>
+							<li>Structure</li>
+							<li>Conclusion</li>
+						</ul>
+					</section>
+				</section>
+				<section data-background-color="#5DCEC6" style="font-size: 60px;">
+					<section >The problem is the lack of asynchrony</section>
+					<section>
+						<div>An effective solution to this problem:</div>
+						<div>is Non-Blocking I / O</div>
+					</section>
+					<section><img src="image1.png" alt="image1"></section>
+				</section>
+				<section data-background-color="#5DCEC6">The Event Loop is what allows Node.js to perform non-blocking I / O operations (even though JavaScript is single-threaded) by offloading operations to the core whenever possible</section>
+				<section data-background-color="#5DCEC6">
+					<div><img src="image2.png" alt="image2"></div>
+					<div>
+						<div>This is the simplest view</div>
+						<div>of what an Event Loop looks like</div>
+					</div>
+				</section>
+				<section data-background-color="#5DCEC6">
+					<div style="font-size: 35px;">
+						The Event Loop is a loop of events, and it is infinite as long as there is something to execute. Event Loop in Node.js is divided into several phases
+					</div>
+					<div><img src="image3.png" alt="image3"></div>
+				</section>
+				<section data-background-color="#5DCEC6">We need to manage and pay attention to both the task queues and the event loop when we write an application in Node.js - in case we want to use its full power, and if we want to keep our long work. tasks from blocking the main thread</section>
+				<section data-background-color="#5DCEC6">
+					<div><h2>Thanks for attention</h2></div>
+					<div style="margin-top: 100px;">Lemeshko Anastasia</div>
+					<div style="margin-top: 20px;">GitHub: https://github.com/LemeshkoNastya/</div>
+				</section>
 			</div>
 		</div>
 
